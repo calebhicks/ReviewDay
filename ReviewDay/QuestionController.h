@@ -10,6 +10,17 @@
 #import "Question.h"
 #import "User.h"
 
+typedef NS_ENUM(NSUInteger, QuestionStatus) {
+    StatusActive,
+    StatusAnswered,
+    StatusDeleted,
+};
+
+typedef NS_ENUM(NSUInteger, UserRole) {
+    RoleStudent,
+    RoleMentor,
+};
+
 @interface QuestionController : NSObject
 
 @property (strong, nonatomic, readonly) NSArray *questions;

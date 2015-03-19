@@ -9,12 +9,6 @@
 #import "QuestionController.h"
 #import "Stack.h"
 
-typedef NS_ENUM(NSUInteger, QuestionStatus) {
-    StatusActive,
-    StatusAnswered,
-    StatusDeleted,
-};
-
 @implementation QuestionController
 
 - (NSArray *)questions {
@@ -29,7 +23,20 @@ typedef NS_ENUM(NSUInteger, QuestionStatus) {
     
     NSArray *users = [[Stack sharedInstance].managedObjectContext executeFetchRequest:request error:nil];
     
-    return users.firstObject;
+    User *user;
+    
+    if (users.firstObject) {
+        user = users.firstObject;
+    } else {
+        user = [NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:[Stack sharedInstance].managedObjectContext];
+        
+        user.name = @"Current User";
+        user.role = [NSNumber numberWithInteger:RoleStudent];
+        
+        [self save];
+    }
+    
+    return user;
 }
 
 - (Question *)createQuestionWithTitle:(NSString *)title details:(NSString *)details {
