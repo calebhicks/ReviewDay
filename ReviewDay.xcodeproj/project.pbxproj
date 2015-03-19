@@ -19,6 +19,8 @@
 		68E79E451ABB2A4E0029D3D9 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E79E441ABB2A4E0029D3D9 /* User.m */; };
 		68E79E481ABB2A4F0029D3D9 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E79E471ABB2A4F0029D3D9 /* Question.m */; };
 		68E79E4B1ABB2AC60029D3D9 /* QuestionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E79E4A1ABB2AC60029D3D9 /* QuestionController.m */; };
+		68E79E4E1ABB2CBC0029D3D9 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E79E4D1ABB2CBC0029D3D9 /* Stack.m */; };
+		68E79E501ABB2D6A0029D3D9 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68E79E4F1ABB2D6A0029D3D9 /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,9 @@
 		68E79E471ABB2A4F0029D3D9 /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
 		68E79E491ABB2AC60029D3D9 /* QuestionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionController.h; sourceTree = "<group>"; };
 		68E79E4A1ABB2AC60029D3D9 /* QuestionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionController.m; sourceTree = "<group>"; };
+		68E79E4C1ABB2CBC0029D3D9 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
+		68E79E4D1ABB2CBC0029D3D9 /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
+		68E79E4F1ABB2D6A0029D3D9 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68E79E501ABB2D6A0029D3D9 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,9 +114,12 @@
 				68E79E471ABB2A4F0029D3D9 /* Question.m */,
 				68E79E431ABB2A4E0029D3D9 /* User.h */,
 				68E79E441ABB2A4E0029D3D9 /* User.m */,
+				68E79E4C1ABB2CBC0029D3D9 /* Stack.h */,
+				68E79E4D1ABB2CBC0029D3D9 /* Stack.m */,
 				68E79E401ABB28AD0029D3D9 /* Model.xcdatamodeld */,
 				68E79E241ABB22CE0029D3D9 /* Images.xcassets */,
 				68E79E261ABB22CE0029D3D9 /* LaunchScreen.xib */,
+				68E79E4F1ABB2D6A0029D3D9 /* CoreData.framework */,
 				68E79E171ABB22CE0029D3D9 /* Supporting Files */,
 			);
 			path = ReviewDay;
@@ -242,6 +251,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68E79E4E1ABB2CBC0029D3D9 /* Stack.m in Sources */,
 				68E79E201ABB22CE0029D3D9 /* QuestionListViewController.m in Sources */,
 				68E79E1D1ABB22CE0029D3D9 /* AppDelegate.m in Sources */,
 				68E79E451ABB2A4E0029D3D9 /* User.m in Sources */,
