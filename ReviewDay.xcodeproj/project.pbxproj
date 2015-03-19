@@ -14,13 +14,13 @@
 		68E79E251ABB22CE0029D3D9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68E79E241ABB22CE0029D3D9 /* Images.xcassets */; };
 		68E79E281ABB22CE0029D3D9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68E79E261ABB22CE0029D3D9 /* LaunchScreen.xib */; };
 		68E79E341ABB22CE0029D3D9 /* ReviewDayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E79E331ABB22CE0029D3D9 /* ReviewDayTests.m */; };
-		68E79E3F1ABB27400029D3D9 /* QuestionDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E79E3E1ABB27400029D3D9 /* QuestionDataSource.m */; };
 		68E79E421ABB28AD0029D3D9 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 68E79E401ABB28AD0029D3D9 /* Model.xcdatamodeld */; };
 		68E79E451ABB2A4E0029D3D9 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E79E441ABB2A4E0029D3D9 /* User.m */; };
 		68E79E481ABB2A4F0029D3D9 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E79E471ABB2A4F0029D3D9 /* Question.m */; };
 		68E79E4B1ABB2AC60029D3D9 /* QuestionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E79E4A1ABB2AC60029D3D9 /* QuestionController.m */; };
 		68E79E4E1ABB2CBC0029D3D9 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E79E4D1ABB2CBC0029D3D9 /* Stack.m */; };
 		68E79E501ABB2D6A0029D3D9 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68E79E4F1ABB2D6A0029D3D9 /* CoreData.framework */; };
+		68E79E531ABB3EE80029D3D9 /* QuestionDetailViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E79E521ABB3EE80029D3D9 /* QuestionDetailViewViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,8 +47,6 @@
 		68E79E2D1ABB22CE0029D3D9 /* ReviewDayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReviewDayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		68E79E321ABB22CE0029D3D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68E79E331ABB22CE0029D3D9 /* ReviewDayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReviewDayTests.m; sourceTree = "<group>"; };
-		68E79E3D1ABB27400029D3D9 /* QuestionDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionDataSource.h; sourceTree = "<group>"; };
-		68E79E3E1ABB27400029D3D9 /* QuestionDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionDataSource.m; sourceTree = "<group>"; };
 		68E79E411ABB28AD0029D3D9 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		68E79E431ABB2A4E0029D3D9 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		68E79E441ABB2A4E0029D3D9 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
@@ -59,6 +57,8 @@
 		68E79E4C1ABB2CBC0029D3D9 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
 		68E79E4D1ABB2CBC0029D3D9 /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
 		68E79E4F1ABB2D6A0029D3D9 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		68E79E511ABB3EE80029D3D9 /* QuestionDetailViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionDetailViewViewController.h; sourceTree = "<group>"; };
+		68E79E521ABB3EE80029D3D9 /* QuestionDetailViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionDetailViewViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,8 +106,8 @@
 				68E79E1C1ABB22CE0029D3D9 /* AppDelegate.m */,
 				68E79E1E1ABB22CE0029D3D9 /* QuestionListViewController.h */,
 				68E79E1F1ABB22CE0029D3D9 /* QuestionListViewController.m */,
-				68E79E3D1ABB27400029D3D9 /* QuestionDataSource.h */,
-				68E79E3E1ABB27400029D3D9 /* QuestionDataSource.m */,
+				68E79E511ABB3EE80029D3D9 /* QuestionDetailViewViewController.h */,
+				68E79E521ABB3EE80029D3D9 /* QuestionDetailViewViewController.m */,
 				68E79E491ABB2AC60029D3D9 /* QuestionController.h */,
 				68E79E4A1ABB2AC60029D3D9 /* QuestionController.m */,
 				68E79E461ABB2A4F0029D3D9 /* Question.h */,
@@ -253,12 +253,12 @@
 			files = (
 				68E79E4E1ABB2CBC0029D3D9 /* Stack.m in Sources */,
 				68E79E201ABB22CE0029D3D9 /* QuestionListViewController.m in Sources */,
+				68E79E531ABB3EE80029D3D9 /* QuestionDetailViewViewController.m in Sources */,
 				68E79E1D1ABB22CE0029D3D9 /* AppDelegate.m in Sources */,
 				68E79E451ABB2A4E0029D3D9 /* User.m in Sources */,
 				68E79E4B1ABB2AC60029D3D9 /* QuestionController.m in Sources */,
 				68E79E421ABB28AD0029D3D9 /* Model.xcdatamodeld in Sources */,
 				68E79E481ABB2A4F0029D3D9 /* Question.m in Sources */,
-				68E79E3F1ABB27400029D3D9 /* QuestionDataSource.m in Sources */,
 				68E79E1A1ABB22CE0029D3D9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

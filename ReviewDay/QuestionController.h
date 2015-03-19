@@ -26,7 +26,11 @@ typedef NS_ENUM(NSUInteger, UserRole) {
 @property (strong, nonatomic, readonly) NSArray *questions;
 @property (strong, nonatomic, readonly) User *currentUser;
 
++ (QuestionController *)sharedInstance;
+
 - (Question *)createQuestionWithTitle:(NSString *)title details:(NSString *)details;
+
+- (NSArray *)questionsWithStatus:(QuestionStatus)status;
 
 - (void)removeQuestion:(Question *)question;
 

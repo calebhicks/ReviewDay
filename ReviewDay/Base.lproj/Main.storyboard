@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="REj-Ra-1gh">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Question List View Controller-->
@@ -19,6 +20,28 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="L8F-fl-ui9">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="questionCell" textLabel="qWL-fr-62R" detailTextLabel="Kvq-Wg-eun" style="IBUITableViewCellStyleSubtitle" id="bk9-4N-9Ye">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bk9-4N-9Ye" id="myc-EC-ct6">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qWL-fr-62R">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Kvq-Wg-eun">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -29,11 +52,70 @@
                             <constraint firstItem="L8F-fl-ui9" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="xWJ-YY-toR"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="LZI-hm-yOi"/>
+                    <navigationItem key="navigationItem" id="LZI-hm-yOi">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="CLA-b0-Mb8">
+                            <connections>
+                                <segue destination="6ET-oE-ocS" kind="show" identifier="addQuestion" id="Ntf-K5-JPU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1869" y="297"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="jzW-0y-CJN">
+            <objects>
+                <viewController id="6ET-oE-ocS" customClass="QuestionDetailViewViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9hR-bG-4Ta"/>
+                        <viewControllerLayoutGuide type="bottom" id="2o7-KM-97r"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="daG-6d-b9x">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Question Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uds-0P-rcF">
+                                <rect key="frame" x="16" y="103" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="Question Details" translatesAutoresizingMaskIntoConstraints="NO" id="cSx-l9-Nob">
+                                <rect key="frame" x="16" y="184" width="568" height="396"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cSx-l9-Nob" firstAttribute="top" secondItem="Uds-0P-rcF" secondAttribute="bottom" constant="51" id="4Qg-dU-F2r"/>
+                            <constraint firstAttribute="bottom" secondItem="cSx-l9-Nob" secondAttribute="bottom" constant="20" symbolic="YES" id="5um-lz-6hX"/>
+                            <constraint firstItem="cSx-l9-Nob" firstAttribute="trailing" secondItem="daG-6d-b9x" secondAttribute="trailingMargin" id="FXj-5v-blX"/>
+                            <constraint firstItem="Uds-0P-rcF" firstAttribute="top" secondItem="9hR-bG-4Ta" secondAttribute="bottom" constant="83" id="HvU-eo-uDm"/>
+                            <constraint firstItem="Uds-0P-rcF" firstAttribute="leading" secondItem="daG-6d-b9x" secondAttribute="leadingMargin" id="O94-a9-s6I"/>
+                            <constraint firstItem="Uds-0P-rcF" firstAttribute="trailing" secondItem="cSx-l9-Nob" secondAttribute="trailing" id="Uc4-fk-hhp"/>
+                            <constraint firstItem="Uds-0P-rcF" firstAttribute="leading" secondItem="cSx-l9-Nob" secondAttribute="leading" id="xUD-XI-x5e"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Title" id="Q97-uo-HPe">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="8qQ-J4-bcd">
+                            <connections>
+                                <action selector="save:" destination="6ET-oE-ocS" id="aSZ-pl-LSN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="detailTextView" destination="cSx-l9-Nob" id="xkH-vv-KPj"/>
+                        <outlet property="titleField" destination="Uds-0P-rcF" id="Q1h-2O-JEY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iXh-xJ-RFw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2508" y="297"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="FdK-eg-7WJ">
